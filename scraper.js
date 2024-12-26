@@ -9,7 +9,7 @@ let selector = document.getElementById('selector').value || 'body';
   console.log( url );
   console.log(selector);
   
-fetch( URL, {
+fetch( url, {
   mode: 'no-cors',
   headers: {
       'Access-Control-Allow-Origin' : '*'
