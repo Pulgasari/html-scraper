@@ -1,6 +1,8 @@
 function startScraper( ){
 
-let url = document.getElementById('url').value || 'https://gooogle.com';
+  console.log('success – in function');
+
+let url = document.getElementById('url').value || 'https://google.com';
 let selector = document.getElementById('selector').value || 'body';
   
 fetch( url )
@@ -9,6 +11,8 @@ fetch( url )
     return response.text()
   })
   .then(html => {
+    console.log('success – in fetch then');
+    
     // Initialize the DOM parser
     const parser = new DOMParser()
 
@@ -28,6 +32,8 @@ fetch( url )
 } 
 
 function textarea( content ){
+
+  console.log('success – in textarea() function');
 
 let box = document.getElementById( 'textbox');
 box.innerHTML = content || 'fail';
