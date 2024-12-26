@@ -4,6 +4,9 @@ function startScraper( ){
 
 let url = document.getElementById('url').value || 'https://google.com';
 let selector = document.getElementById('selector').value || 'body';
+
+  console.log(url);
+  console.log(selector);
   
 fetch( url )
   .then(response => {
