@@ -2,13 +2,19 @@ function startScraper( ){
 
   console.log('success – in function');
 
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 let url = document.getElementById('url').value || 'https://google.com';
 let selector = document.getElementById('selector').value || 'body';
 
-  console.log(url);
+  console.log( proxyUrl + url );
   console.log(selector);
   
-fetch( url )
+fetch( URL, {
+  mode: 'no-cors',
+  headers: {
+      'Access-Control-Allow-Origin' : '*'
+  }
+})
   .then(response => {
     // When the page is loaded convert it to text
     return response.text()
