@@ -1,6 +1,7 @@
-function scrape( url, selector ){
+function startScraper( ){
 
-
+let url = document.getElementById('url').value || 'https://gooogle.com';
+let selector = document.getElementById('selector').value || 'body';
   
 fetch( url )
   .then(response => {
@@ -29,6 +30,6 @@ fetch( url )
 function textarea( content ){
 
 let box = document.getElementById( 'textbox');
-Box.innerHTML = content;
+box.innerHTML = content || 'fail';
 
 } 
