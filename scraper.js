@@ -9,12 +9,7 @@ let selector = document.getElementById('selector').value || 'body';
   console.log( url );
   console.log(selector);
   
-fetch( url, {
-  mode: 'no-cors',
-  headers: {
-      'Access-Control-Allow-Origin' : '*'
-  }
-})
+fetch( url )
   .then(response => {
     // When the page is loaded convert it to text
     return response.text()
