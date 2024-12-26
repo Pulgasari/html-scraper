@@ -9,7 +9,9 @@ let selector = document.getElementById('selector').value || 'body';
   console.log( url );
   console.log(selector);
   
-fetch( url )
+fetch( url, {
+  headers: { 'Content-Type': 'text/plain' }
+} )
   .then(response => {
     // When the page is loaded convert it to text
     return response.text()
